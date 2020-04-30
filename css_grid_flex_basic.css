@@ -1,0 +1,54 @@
+/** Grid: 12 column basic grid
+ *
+ * @package   GNU General Public License
+ * @author    Ludvik Herrera <ludvik@ludvikherrera.com> 
+ * @copyright 2015 Ludvik Herrera.
+ * @license   https://creativecommons.org/licenses/by/4.0/ Attribution 4.0 International (CC BY 4.0)
+ * @link      https://github.com/ludvikherrera
+ */
+
+  :root {
+      --gutter: 16px;
+      --colwidth: calc( (100% - (var(--gutter) * 11)) / 12); 
+  }
+  
+  .row { display : flex; margin  : var(--gutter) 0; padding : 0; }
+  
+  .col { position : relative; flex: 1; }
+
+  .col-1, .col-2, .col-3,  .col-4,  .col-5,  .col-6,  .col-7,  .col-8,  .col-9,  .col-10,  .col-11,  .col-12,  .off-1,  .off-2,  .off-3,  .off-4,  .off-5,  .off-6,  .off-7,  .off-8,  .off-9,  .off-10,  .off-11,  .off-12 { margin-bottom: var(--gutter);  margin-right: var(--gutter); }
+
+  .off-1,  .off-2,  .off-3,  .off-4,  .off-5,  .off-6,  .off-7,  .off-8,  .off-9,  .off-10,  .off-11,  .off-12 { flex : 1; }
+
+  .colspan { flex: 1; flex-direction: column; }
+  .rowspan { flex: 1; flex-direction : row; }
+
+  .col-1 { max-width: calc((var(--colwidth)*1)); flex: 1; flex-basis: calc((var(--colwidth)*1)); }
+  .col-2 { flex: 1; flex-basis: calc((var(--colwidth)*2) + (var(--gutter)*1)); }
+  .col-3 { flex: 1; flex-basis: calc((var(--colwidth)*3) + (var(--gutter)*2)); max-width: calc((var(--colwidth)*3) + (var(--gutter)*2)); }
+  .col-4 { flex: 1; flex-basis: calc((var(--colwidth)*4) + (var(--gutter)*3)); max-width: calc((var(--colwidth)*4) + (var(--gutter)*3)); }
+  .col-5 { flex: 1; flex-basis: calc((var(--colwidth)*5) + (var(--gutter)*4)); max-width: calc((var(--colwidth)*5) + (var(--gutter)*4)); }
+  .col-6 { flex: 1; flex-basis: calc((var(--colwidth)*6) + (var(--gutter)*5)); max-width: calc((var(--colwidth)*6) + (var(--gutter)*5)); }
+  .col-7 { flex: 1; flex-basis: calc((var(--colwidth)*7) + (var(--gutter)*6)); max-width: calc((var(--colwidth)*7) + (var(--gutter)*6)); }
+  .col-8 { flex: 1; flex-basis: calc((var(--colwidth)*8) + (var(--gutter)*7)); max-width: calc((var(--colwidth)*8) + (var(--gutter)*7)); }
+  .col-9 { flex: 1; flex-basis: calc((var(--colwidth)*9) + (var(--gutter)*8)); max-width: calc((var(--colwidth)*9) + (var(--gutter)*8)); }
+  .col-10 { flex: 1; flex-basis: calc((var(--colwidth)*10) + (var(--gutter)*9)); max-width: calc((var(--colwidth)*10) + (var(--gutter)*9)); }
+  .col-11 { flex: 1; flex-basis: calc((var(--colwidth)*11) + (var(--gutter)*10)); max-width: calc((var(--colwidth)*11) + (var(--gutter)*10)); }
+  .col-12 { flex: 1; flex-basis: calc((var(--colwidth)*12) + (var(--gutter)*11)); max-width: calc((var(--colwidth)*12) + (var(--gutter)*11)); }
+
+  .off-1 { margin-left: calc((var(--colwidth)*1) + (var(--gutter)*1)); }
+  .off-2 { margin-left: calc((var(--colwidth)*2) + (var(--gutter)*2)); }
+  .off-3 { margin-left: calc((var(--colwidth)*3) + (var(--gutter)*3)); }
+  .off-4 { margin-left: calc((var(--colwidth)*4) + (var(--gutter)*4)); }
+  .off-5 { margin-left: calc((var(--colwidth)*5) + (var(--gutter)*5)); }
+  .off-6 { margin-left: calc((var(--colwidth)*6) + (var(--gutter)*6)); }
+  .off-7 { margin-left: calc((var(--colwidth)*7) + (var(--gutter)*7)); }
+  .off-8 { margin-left: calc((var(--colwidth)*8) + (var(--gutter)*8)); }
+  .off-9 { margin-left: calc((var(--colwidth)*9) + (var(--gutter)*9)); }
+  .off-10 { margin-left: calc((var(--colwidth)*10) + (var(--gutter)*10)); }
+  .off-11 { margin-left: calc((var(--colwidth)*11) + (var(--gutter)*11)); }
+  .off-12 { margin-left: calc((var(--colwidth)*12) + (var(--gutter)*12)); }
+
+  .col-1:first-child, .col-2:first-child, .col-3:first-child, .col-4:first-child, .col-5:first-child, .col-6:first-child, .col-7:first-child, .col-8:first-child, .col-9:first-child, .col-10:first-child, .col-11:first-child, .col-12:first-child, .col:first-child, .half:first-child { /* margin-left : 0; */ }
+
+  .col-1:last-child, .col-2:last-child, .col-3:last-child, .col-4:last-child, .col-5:last-child, .col-6:last-child, .col-7:last-child, .col-8:last-child, .col-9:last-child, .col-10:last-child, .col-11:last-child, .col-12:last-child, .col:last-child { margin-right : 0; }
